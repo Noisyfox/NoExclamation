@@ -44,23 +44,68 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/enable_https"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="启用 https:" />
+
+                <TextView
+                    android:id="@+id/tv_https_enabled"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="未知" />
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switch_https_enabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="当前的 Portal Server:" />
+            android:text="当前的 Portal Server URL (http):" />
 
         <TextView
-            android:id="@+id/tv_server"
+            android:id="@+id/tv_url"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="未知" />
 
         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="当前的 Portal Server URL (https):" />
+
+        <TextView
+            android:id="@+id/tv_url_https"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="未知" />
+
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="修改服务地址：" />
+            android:text="修改服务 URL：" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,19 +114,41 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editText_server"
+                android:id="@+id/editText_url"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:maxLines="1"
                 android:singleLine="true"
-                android:text="noisyfox.cn" />
+                android:text="http://noisyfox.cn/generate_204" />
 
             <Button
-                android:id="@+id/btn_server_save"
+                android:id="@+id/btn_url_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="应用" />
+                android:text="应用 (http)" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText_url_https"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="https://noisyfox.cn/generate_204" />
+
+            <Button
+                android:id="@+id/btn_url_https_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应用 (https)" />
         </LinearLayout>
 
         <LinearLayout
