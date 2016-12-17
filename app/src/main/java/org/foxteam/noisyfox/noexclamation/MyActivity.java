@@ -56,9 +56,8 @@ public class MyActivity extends Activity implements CompoundButton.OnCheckedChan
             public void run(Bundle result) {
                 if (result != null) {
                     Toast.makeText(MyActivity.this, "无法获得root权限！程序将可能无法正常使用！", Toast.LENGTH_LONG).show();
-                } else {
-                    refreshStatus();
                 }
+                refreshStatus();
             }
         });
     }
