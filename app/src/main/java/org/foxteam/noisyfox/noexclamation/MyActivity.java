@@ -191,7 +191,7 @@ public class MyActivity extends Activity implements CompoundButton.OnCheckedChan
         if ("0".equals(value)) {
             tv.setText("Off");
             sw.setChecked(false);
-        } else if ("1".equals(value)) {
+        } else if ("1".equals(value) || "null".equals(value)) {
             tv.setText("On");
             sw.setChecked(true);
         } else {
