@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="使用说明">
+        <Preference android:summary="最简单的去掉网络连接的感叹号的方式：\n戳 设为 noisyfox.io 选项，然后开飞行模式，然后再关飞行模式，搞定！" />
+    </PreferenceCategory>
+
+    <Preference
+        android:key="refresh"
+        android:title="刷新当前状态" />
+
+    <PreferenceCategory android:title="Portal Server 一键设置">
+        <Preference
+            android:key="set_noisyfox"
+            android:summary="将 portal server 设置为 noisyfox.io。"
+            android:title="设为 noisyfox.io" />
+        <Preference
+            android:key="set_google"
+            android:summary="将 portal server 重置为系统默认设置。"
+            android:title="重置为默认值" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="cat_detail_settings"
+        android:title="详细设置">
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="关于">
+        <Preference
+            android:summary="猛戳这里-> github.com/Noisyfox/NoExclamation"
+            android:title="开源啦！">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Noisyfox/NoExclamation" />
+        </Preference>
+        <Preference
+            android:summary="欢迎访问我的博客来支持我的作品！\n猛戳这里-> noisyfox.io"
+            android:title="求关注！求打赏！">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.noisyfox.io" />
+        </Preference>
+        <Preference
+            android:summary="@string/app_version_name"
+            android:title="版本" />
+    </PreferenceCategory>
+</PreferenceScreen>
