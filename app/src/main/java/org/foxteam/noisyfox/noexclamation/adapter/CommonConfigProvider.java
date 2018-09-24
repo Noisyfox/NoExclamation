@@ -40,7 +40,7 @@ public class CommonConfigProvider implements IConfigProvider, ISettingsItem.OnSe
 
     @Override
     public void refreshStatus() {
-        mTaskExecutor.runTask("刷新当前状态", new ITaskExecutor.TaskRunnable() {
+        mTaskExecutor.runTask("Refreshing", new ITaskExecutor.TaskRunnable() {
             @Override
             public Bundle run() {
                 Bundle result = new Bundle();
@@ -61,7 +61,7 @@ public class CommonConfigProvider implements IConfigProvider, ISettingsItem.OnSe
 
     @Override
     public void resetToGoogle() {
-        mTaskExecutor.runTask("重置为默认值", new ITaskExecutor.TaskRunnable() {
+        mTaskExecutor.runTask("Restoring default server", new ITaskExecutor.TaskRunnable() {
             @Override
             public Bundle run() {
                 for (ISettingsItem s : mAllSettings) {
@@ -79,7 +79,7 @@ public class CommonConfigProvider implements IConfigProvider, ISettingsItem.OnSe
 
     @Override
     public void setToNoisyfox() {
-        mTaskExecutor.runTask("设置为 noisyfox.io", new ITaskExecutor.TaskRunnable() {
+        mTaskExecutor.runTask("Changing server to noisyfox.io", new ITaskExecutor.TaskRunnable() {
             @Override
             public Bundle run() {
                 for (ISettingsItem s : mAllSettings) {

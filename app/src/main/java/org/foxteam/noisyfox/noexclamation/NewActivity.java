@@ -66,7 +66,7 @@ public class NewActivity extends PreferenceActivity implements ITaskExecutor {
             }
         });
 
-        runTask("Grant root access", new TaskRunnable() {
+        runTask("Granting root access", new TaskRunnable() {
             @Override
             public Bundle run() {
                 String result = Utils.cmdExecSu("id");
