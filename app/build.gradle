@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 28
 
     defaultConfig {
         applicationId "org.foxteam.noisyfox.noexclamation"
         minSdkVersion 21
-        targetSdkVersion 25
+        targetSdkVersion 28
     }
 
     buildTypes {
