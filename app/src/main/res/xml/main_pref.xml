@@ -1,46 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="About the app">
-        <Preference android:summary="Fixes the error state (exclamation mark) of WiFi networks in China on a Google Play Services phone. Google uses their own servers to verify the captive portal of WiFi networks.\nGoogle's servers will be substituted with &quot;noisyfox.io&quot;, to prevent WiFi sign-in errors on Chinese networks. " />
+    <PreferenceCategory android:title="@string/prefCategory_Instructions">
+        <Preference android:summary="@string/prefSummary_Instructions" />
     </PreferenceCategory>
 
     <Preference
         android:key="refresh"
-        android:title="Refresh" />
+        android:title="@string/prefTitle_refreshStatus" />
 
-    <PreferenceCategory android:title="Portal Server Configuration">
+    <PreferenceCategory android:title="@string/prefCategory_portalSetup">
         <Preference
             android:key="set_noisyfox"
-            android:summary="Change server to &quot;noisyfox.io&quot;"
-            android:title="Apply" />
+            android:summary="@string/prefSummary_setToNoisyfox"
+            android:title="@string/prefTitle_setToNoisyfox" />
         <Preference
             android:key="set_google"
-            android:summary="Change server to Google"
-            android:title="Reset to default" />
+            android:summary="@string/prefSummary_resetToDefault"
+            android:title="@string/prefTitle_resetToDefault" />
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="cat_detail_settings"
-        android:title="Advanced Settings">
+        android:title="@string/prefCategory_detailedSettings">
+
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="About">
+    <PreferenceCategory android:title="@string/prefCategory_about">
         <Preference
-            android:summary="github.com/Noisyfox/NoExclamation"
-            android:title="Visit GitHub repository">
+            android:summary="@string/prefSummary_visitGithub"
+            android:title="@string/prefTitle_openSrcGithub">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/Noisyfox/NoExclamation" />
         </Preference>
         <Preference
-            android:summary="noisyfox.io"
-            android:title="Visit our website">
+            android:summary="@string/prefSummary_visitBlog"
+            android:title="@string/prefTitle_visitBlog">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://www.noisyfox.io" />
         </Preference>
         <Preference
             android:summary="@string/app_version_name"
-            android:title="Current version" />
+            android:title="@string/version_prefix" />
     </PreferenceCategory>
 </PreferenceScreen>

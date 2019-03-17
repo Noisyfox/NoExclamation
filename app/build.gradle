@@ -8,6 +8,7 @@ android {
         applicationId "org.foxteam.noisyfox.noexclamation"
         minSdkVersion 21
         targetSdkVersion 25
+        resConfigs "zh", "en"
     }
 
     buildTypes {

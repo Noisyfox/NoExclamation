@@ -15,10 +15,11 @@ import org.foxteam.noisyfox.noexclamation.adapter.ITaskExecutor;
 
 import java.util.concurrent.locks.ReentrantLock;
 
+import static org.foxteam.noisyfox.noexclamation.App.getStr;
+
 /**
  * Created by Noisyfox on 2017/7/1.
  */
-//////Translated by Bryan Walsh (bwalsh0) on 2018/9/24.
 
 public class NewActivity extends PreferenceActivity implements ITaskExecutor {
 
@@ -44,7 +45,7 @@ public class NewActivity extends PreferenceActivity implements ITaskExecutor {
         findPreference("set_noisyfox").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                askForConfirm("Change captive portal server to \"noisyfox.io?\"", new Runnable() {
+                askForConfirm(getStr(R.string.setting_toNoisyFox), new Runnable() {
                     @Override
                     public void run() {
                         provider.setToNoisyfox();
@@ -56,7 +57,7 @@ public class NewActivity extends PreferenceActivity implements ITaskExecutor {
         findPreference("set_google").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                askForConfirm("Restore server to Google's default setting?", new Runnable() {
+                askForConfirm(getStr(R.string.setting_toGoogle), new Runnable() {
                     @Override
                     public void run() {
                         provider.resetToGoogle();
@@ -66,7 +67,7 @@ public class NewActivity extends PreferenceActivity implements ITaskExecutor {
             }
         });
 
-        runTask("Granting root access", new TaskRunnable() {
+        runTask(getString(R.string.runTask_getRoot), new TaskRunnable() {
             @Override
             public Bundle run() {
                 String result = Utils.cmdExecSu("id");
@@ -79,7 +80,7 @@ public class NewActivity extends PreferenceActivity implements ITaskExecutor {
             @Override
             public void run(Bundle result) {
                 if (result != null) {
-                    Toast.makeText(NewActivity.this, "Unable to grant root access! This application requires superuser permissions to function.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(NewActivity.this, getStr(R.string.toast_needsRootMsg), Toast.LENGTH_LONG).show();
                 }
                 provider.refreshStatus();
             }
@@ -137,13 +138,13 @@ public class NewActivity extends PreferenceActivity implements ITaskExecutor {
     private void askForConfirm(String msg, final Runnable doStuff) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(msg);
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getStr(R.string.dialogBtn_Confirm), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 doStuff.run();
             }
         });
-        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(getStr(R.string.dialogBtn_Cancel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
             }

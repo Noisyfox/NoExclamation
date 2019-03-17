@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.Preference;
 
+import org.foxteam.noisyfox.noexclamation.R;
+
+import static org.foxteam.noisyfox.noexclamation.App.getStr;
+
 /**
  * Created by Noisyfox on 2017/7/1.
  */
@@ -41,7 +45,7 @@ public class TextSettings extends GlobalKeyedSettings implements Preference.OnPr
 
         String v = getValue(value);
         if (v == null || "null".equals(v)) {
-            mPreference.setSummary("默认");
+            mPreference.setSummary(getStr(R.string.value_isDefault));
             mPreference.setText(mDefaultValue);
         } else {
             mPreference.setSummary(v);

@@ -4,10 +4,13 @@ import android.content.Context;
 import android.os.Bundle;
 import android.preference.PreferenceCategory;
 
+import org.foxteam.noisyfox.noexclamation.R;
 import org.foxteam.noisyfox.noexclamation.adapter.settings.ISettingsItem;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.foxteam.noisyfox.noexclamation.App.getStr;
 
 /**
  * Created by Noisyfox on 2017/7/1.
@@ -40,7 +43,7 @@ public class CommonConfigProvider implements IConfigProvider, ISettingsItem.OnSe
 
     @Override
     public void refreshStatus() {
-        mTaskExecutor.runTask("Refreshing", new ITaskExecutor.TaskRunnable() {
+        mTaskExecutor.runTask(getStr(R.string.status_refresh), new ITaskExecutor.TaskRunnable() {
             @Override
             public Bundle run() {
                 Bundle result = new Bundle();
@@ -61,7 +64,7 @@ public class CommonConfigProvider implements IConfigProvider, ISettingsItem.OnSe
 
     @Override
     public void resetToGoogle() {
-        mTaskExecutor.runTask("Restoring default server", new ITaskExecutor.TaskRunnable() {
+        mTaskExecutor.runTask(getStr(R.string.status_reset), new ITaskExecutor.TaskRunnable() {
             @Override
             public Bundle run() {
                 for (ISettingsItem s : mAllSettings) {
@@ -79,7 +82,7 @@ public class CommonConfigProvider implements IConfigProvider, ISettingsItem.OnSe
 
     @Override
     public void setToNoisyfox() {
-        mTaskExecutor.runTask("Changing server to noisyfox.io", new ITaskExecutor.TaskRunnable() {
+        mTaskExecutor.runTask(getStr(R.string.status_setNoisyFox), new ITaskExecutor.TaskRunnable() {
             @Override
             public Bundle run() {
                 for (ISettingsItem s : mAllSettings) {
