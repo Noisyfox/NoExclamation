@@ -6,6 +6,7 @@
 
     <application
         android:label="@string/app_name"
+        android:name="App"
         android:icon="@drawable/ic_launcher"
         android:theme="@android:style/Theme.Material.Light.DarkActionBar"
         android:allowBackup="true">

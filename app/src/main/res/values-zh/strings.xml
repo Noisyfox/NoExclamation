@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">叹号杀手</string>
-    <string name="app_version_name" translatable="false">3.0</string>
 
     <string name="setting_toNoisyFox">即将把服务器地址设置为 noisyfox.io，是否继续？</string>
     <string name="setting_toGoogle">即将把服务器地址重置为默认值，是否继续？</string>
@@ -49,6 +48,6 @@
     <string name="prefCategory_Instructions">使用说明</string>
     <string name="prefSummary_Instructions">最简单的去掉网络连接的感叹号的方式： 戳 设为 noisyfox.io 选项，然后开飞行模式，然后再关飞行模式，搞定！</string>
     <string name="status_unknown">未知</string>
-    <string name="value_isDefault">默认</string>
     <string name="setting_useHttps">启用 https</string>
+    <string name="value_isDefault">默认</string>
 </resources>

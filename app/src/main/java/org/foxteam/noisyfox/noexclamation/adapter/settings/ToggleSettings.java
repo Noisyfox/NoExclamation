@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.SwitchPreference;
 
+import org.foxteam.noisyfox.noexclamation.R;
+
+import static org.foxteam.noisyfox.noexclamation.App.getStr;
+
 /**
  * Created by Noisyfox on 2017/7/1.
  */
@@ -86,7 +90,7 @@ public class ToggleSettings extends GlobalKeyedSettings implements Preference.On
                 mPreference.setChecked(false);
                 break;
             case Unknown:
-                mPreference.setSummary("未知");
+                mPreference.setSummary(getStr(R.string.status_unknown));
                 mPreference.setChecked(false);
                 break;
         }

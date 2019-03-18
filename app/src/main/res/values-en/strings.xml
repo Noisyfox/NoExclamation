@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    English Translation
+    by Bryan Walsh
+    (https://github.com/bwalsh0)
+    -->
+
+    <string name="app_name">NoExclamation</string>
+
+    <string name="setting_toGoogle">Reset to system default?</string>
+    <string name="runTask_getRoot">Grant root permission</string>
+
+    <string name="toast_needsRootMsg">Unable to access root priveliges! This application may not work as intended.</string>
+    <string name="dialogBtn_Confirm">Confirm</string>
+    <string name="dialogBtn_Cancel">Cancel</string>
+
+    <string name="portalModeTitle">Captive Portal Detection Mode</string>
+    <string name="portalMode_disable">Disable</string>
+    <string name="portalMode_promptOnly">Prompt for login</string>
+
+    <string name="portalDetectionTitle">Captive Portal Detection</string>
+    <string name="progress_open">Opening</string>
+    <string name="progress_close">Closing</string>
+
+    <string name="protocol_http">HTTP URL</string>
+    <string name="protocol_https">HTTPS URL</string>
+    <string name="protocol_default">Default Protocol</string>
+
+    <string name="status_refresh">Refreshing status</string>
+    <string name="status_reset">Resetting to default</string>
+    <string name="status_setNoisyFox">Set to noisyfox.io</string>
+
+    <string name="version_prefix">Version</string>
+
+    <string name="prefSummary_visitBlog">Visit my blog to support my work! Visit 一noisyfox.io</string>
+    <string name="prefTitle_visitBlog">Check out the blog!</string>
+    <string name="prefCategory_about">About</string>
+
+    <string name="prefSummary_visitGithub">Visit 一github.com/Noisyfox/NoExclamation</string>
+    <string name="prefTitle_openSrcGithub">Open Source!</string>
+    <string name="prefCategory_detailedSettings">Advanced Settings</string>
+
+    <string name="prefTitle_resetToDefault">Reset to default</string>
+    <string name="prefSummary_resetToDefault">Reset portal server to system default</string>
+    <string name="prefTitle_setToNoisyfox">Set to noisyfox.io</string>
+    <string name="prefSummary_setToNoisyfox">Set portal server to noisyfox.io</string>
+
+    <string name="prefCategory_portalSetup">One-Click Setup</string>
+    <string name="prefTitle_refreshStatus">Refresh Status</string>
+
+    <string name="prefCategory_Instructions">Instructions</string>
+    <string name="prefSummary_Instructions">This is the easiest way to get rid of the exclamation mark (error mode) of a Wi-Fi connection. Tap \"Set to noisyfox.io\", turn on Airplane mode, turn it back off, and it will be fixed!</string>
+    <string name="portalMode_ignoreLoginPrompts">Ignore networks with login prompts</string>
+    <string name="setting_toNoisyFox">Set server to noisyfox.io?</string>
+    <string name="status_unknown">Unknown</string>
+    <string name="setting_useHttps">Use HTTPS</string>
+    <string name="value_isDefault">Default</string>
+</resources>

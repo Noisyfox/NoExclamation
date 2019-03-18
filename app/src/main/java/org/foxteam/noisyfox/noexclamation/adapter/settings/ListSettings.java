@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 
+import org.foxteam.noisyfox.noexclamation.R;
+
+import static org.foxteam.noisyfox.noexclamation.App.getStr;
+
 /**
  * Created by Noisyfox on 2017/7/1.
  */
@@ -54,7 +58,7 @@ public class ListSettings extends GlobalKeyedSettings implements Preference.OnPr
         String v = getValue(value);
         if (v == null || "null".equals(v)) {
             mPreference.setValueIndex(defaultValueIndex);
-            mPreference.setSummary(v == null ? "未知" : mDisplayValues[defaultValueIndex]);
+            mPreference.setSummary(v == null ? getStr(R.string.status_unknown) : mDisplayValues[defaultValueIndex]);
         } else {
             mPreference.setValue(v);
             mPreference.setSummary(mPreference.getEntry());
